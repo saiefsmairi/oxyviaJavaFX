@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="530.0" prefWidth="1085.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Oxyvia.gui.AfficheFactureController">
+    <stylesheets>
+        <URL value="@affichefacture.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="tableFacture" layoutX="65.0" layoutY="198.0" prefHeight="311.0" prefWidth="1015.0">
+        <columns>
+          <TableColumn fx:id="c1Col" prefWidth="43.0" text="N'um" />
+          <TableColumn fx:id="c2Col" minWidth="6.0" prefWidth="19.0" text="ID" />
+            <TableColumn fx:id="c3Col" prefWidth="56.0" text="Montant" />
+            <TableColumn fx:id="c4Col" prefWidth="35.0" text="Date" />
+            <TableColumn fx:id="c5Col" prefWidth="45.0" text="Devise" />
+            <TableColumn fx:id="c6Col" prefWidth="50.0" text="Moyen " />
+            <TableColumn fx:id="c7Col" prefWidth="54.0" text="Mode " />
+            <TableColumn fx:id="c8Col" prefWidth="69.0" text="Type de CB" />
+            <TableColumn fx:id="c9Col" prefWidth="90.0" text="Numéro de CB" />
+            <TableColumn fx:id="c10Col" prefWidth="46.0" text="Code " />
+            <TableColumn fx:id="c11Col" prefWidth="95.0" text="Expiration date" />
+            <TableColumn fx:id="c12Col" prefWidth="66.0" text="Location" />
+            <TableColumn fx:id="c13Col" prefWidth="71.0" text="Pays" />
+            <TableColumn fx:id="c14Col" prefWidth="91.0" text="Facture state" />
+            <TableColumn fx:id="c15Col" prefWidth="84.0" text="Color" />
+            <TableColumn fx:id="editCol" minWidth="0.0" prefWidth="97.0" text="Actions" />
+        </columns>
+      </TableView>
+      <Pane layoutX="-1.0" layoutY="68.0" prefHeight="5.0" prefWidth="1085.0" style="-fx-background-color: black;" />
+      <Text fill="#f00000" layoutX="308.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="List &amp; Handle Factures £" wrappingWidth="474.136754989624">
+         <font>
+            <Font name="Baskerville Old Face" size="41.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="41.0" fitWidth="47.0" layoutX="78.0" layoutY="151.0" onMouseClicked="#addNew" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/téléchargement%20(2).jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="41.0" fitWidth="46.0" layoutX="132.0" layoutY="152.0" onMouseClicked="#refreshTable" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/téléchargement%20(3).jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="100.0" fitWidth="155.0" layoutX="883.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/payer-concept-factures_1325-175.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
