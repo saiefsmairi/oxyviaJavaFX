@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="534.0" prefWidth="1063.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication4.AjoutReservationController">
+    <children>
+        <Label layoutX="46.0" layoutY="134.0" text="date debut" />
+        <Label layoutX="46.0" layoutY="188.0" text="date fin" />
+        <Label layoutX="46.0" layoutY="236.0" text="nb_adulte" />
+        <Label layoutX="46.0" layoutY="276.0" text="nb_enfants" />
+        <TextField id="nomvoyage" fx:id="nb_adulte" layoutX="158.0" layoutY="232.0" />
+        <DatePicker id="date_debut" fx:id="datedebutvoyage" layoutX="158.0" layoutY="130.0" prefHeight="25.0" prefWidth="149.0" />
+        <DatePicker id="date_fin" fx:id="datefinvoyage" layoutX="158.0" layoutY="176.0" prefHeight="25.0" prefWidth="149.0" />
+        <TextField id="villevoyage" fx:id="nb_enfants" layoutX="158.0" layoutY="272.0" />
+        <TextField id="nbpersonnevoyage" fx:id="txtdouble" layoutX="158.0" layoutY="384.0" />
+        <TextField id="prixvoyage" fx:id="single" layoutX="158.0" layoutY="326.0" />
+        <Label fx:id="lblchambresingle" layoutX="40.0" layoutY="330.0" text="nb_chambre_single" />
+        <Label fx:id="lblchambredouble" layoutX="37.0" layoutY="388.0" text="nb_chambre_double" />
+        <Separator layoutX="332.0" layoutY="54.0" orientation="VERTICAL" prefHeight="200.0" />
+        <Separator layoutX="332.0" layoutY="209.0" orientation="VERTICAL" prefHeight="200.0" />
+        <Label layoutX="511.0" layoutY="22.0" prefHeight="17.0" prefWidth="219.0" text="Mes Reservations" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="22.0" />
+            </font>
+        </Label>
+        <TableView fx:id="restable" layoutX="341.0" layoutY="82.0" prefHeight="208.0" prefWidth="714.0">
+            <columns>
+                <TableColumn fx:id="datedebcol" prefWidth="100.0" text="DATE DEBUT" />
+                <TableColumn fx:id="datefincol" prefWidth="96.0" text="DATE FIN " />
+                <TableColumn fx:id="nbadultecol" prefWidth="61.0" text="ADULTES" />
+                <TableColumn fx:id="nbenfantscol" prefWidth="77.0" text="ENFANTS" />
+                <TableColumn fx:id="hotelnamecol" prefWidth="103.0" text="NOM HOTEL" />
+                <TableColumn fx:id="colhotelid" prefWidth="75.0" text="hotel id" visible="false" />
+                <TableColumn fx:id="colidvoyage" prefWidth="75.0" text="voyage id" visible="false" />
+            <TableColumn fx:id="singleroomcol" prefWidth="108.0" text="CHAMBRE SINGLE" />
+            <TableColumn fx:id="doubleroomcol" prefWidth="114.0" text="CHAMBRE DOUBLE" />
+            <TableColumn fx:id="prixcol" prefWidth="43.0" text="PRIX" />
+
+                        </columns>
+        </TableView>
+      <Label fx:id="lblreservationpour" layoutX="32.0" layoutY="54.0" text="Reservation pour Hotel : ">
+         <font>
+            <Font name="Britannic Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblnom" layoutX="32.0" layoutY="89.0" text="Label">
+         <font>
+            <Font name="Britannic Bold" size="20.0" />
+         </font>
+      </Label>
+      <ButtonBar layoutX="451.0" layoutY="357.0" prefHeight="55.0" prefWidth="449.0">
+        <buttons>
+            <Button mnemonicParsing="false" onAction="#saveres" prefHeight="38.0" prefWidth="103.0" style="-fx-background-color: #6699ff;" text="Enregistrer" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#supprimerReservation" prefHeight="38.0" prefWidth="103.0" style="-fx-background-color: #6699ff;" text="Supprimer" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#updateRes" prefHeight="38.0" prefWidth="103.0" style="-fx-background-color: #6699ff;" text="Metrre A jour" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#clearChamps" prefHeight="38.0" prefWidth="103.0" style="-fx-background-color: #6699ff;" text="Vider Champs" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+        </buttons>
+      </ButtonBar>
+    
+        
+    </children>
+</AnchorPane>
