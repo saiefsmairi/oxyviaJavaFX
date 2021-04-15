@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.ChambreController">
+   <children>
+      <TextField fx:id="numerotext" layoutX="103.0" layoutY="54.0" promptText="numero" />
+      <TextField fx:id="prixtext" layoutX="104.0" layoutY="172.0" promptText="prix" />
+      <TextField fx:id="imagetext" layoutX="105.0" layoutY="293.0" onMouseClicked="#importimg" promptText="image" />
+      <ComboBox fx:id="typetext" layoutX="103.0" layoutY="114.0" prefWidth="150.0" promptText="type" />
+      <ComboBox fx:id="hoteltext" layoutX="105.0" layoutY="230.0" prefWidth="150.0" promptText="hotel" />
+      <Button fx:id="ajouterbtn" layoutX="389.0" layoutY="454.0" mnemonicParsing="false" onMouseClicked="#ajouterChambre" text="ajouter" />
+      <Button fx:id="modifierbtn" layoutX="559.0" layoutY="454.0" mnemonicParsing="false" onMouseClicked="#modifierChambre" text="modifier" />
+      <Button fx:id="supprimerbtn" layoutX="746.0" layoutY="455.0" mnemonicParsing="false" onMouseClicked="#supprimerChambre" text="supprimer" />
+      <TableView fx:id="tablechambre" layoutX="306.0" layoutY="67.0" onMouseClicked="#afficherForm" prefHeight="315.0" prefWidth="775.0">
+        <columns>
+          <TableColumn fx:id="numero" prefWidth="100.79995727539062" text="numero" />
+          <TableColumn fx:id="type" prefWidth="116.0" text="type" />
+            <TableColumn fx:id="prix" prefWidth="115.46664428710938" text="prix" />
+            <TableColumn fx:id="hotel" prefWidth="113.33331298828125" text="hotel" />
+            <TableColumn fx:id="image" prefWidth="168.26654052734375" text="image" />
+        </columns>
+      </TableView>
+      <ImageView fx:id="imageview" fitHeight="150.0" fitWidth="200.0" layoutX="78.0" layoutY="330.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="textid" layoutX="105.0" layoutY="28.0" textFill="WHITE" />
+   </children>
+</AnchorPane>

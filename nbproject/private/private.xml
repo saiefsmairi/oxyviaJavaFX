@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/pidev/src/pidev/Pidev.java</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/pidev/src/pidev/FXMLDocument.fxml</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/pidev/src/Service/HotelService.java</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/pidev/src/Entity/Chambre.java</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/pidev/src/Interface/IService.java</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/pidev/src/Entity/Hotel.java</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/pidev/src/pidev/HotelController.java</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/pidev/src/pidev/Hotel.fxml</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/pidev/src/pidev/FXMLDocumentController.java</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/pidev/src/Utulitaire/Singleton.java</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/pidev/src/Service/ChambreService.java</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/pidev/src/pidev/Chambre.fxml</file>
+            <file>file:/C:/Users/USER/Documents/NetBeansProjects/pidev/src/pidev/ChambreController.java</file>
+        </group>
+    </open-files>
+</project-private>
