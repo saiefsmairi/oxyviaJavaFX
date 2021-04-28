@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.Rating?>
+
+<AnchorPane id="AnchorPane" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #ffe6e6;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.SingleController">
+    <stylesheets>
+        <URL value="@home.css" />
+    </stylesheets>
+   <children>
+      <Pane layoutX="10.0" layoutY="10.0" prefHeight="64.0" prefWidth="1910.0" style="-fx-background-color: #333645;">
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" height="10.0" radius="4.5" width="10.0">
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+         <children>
+            <Label layoutX="20.0" prefHeight="66.0" prefWidth="287.0" text="Oxyvia Tours" textFill="#00a2d3">
+               <font>
+                  <Font name="System Bold" size="45.0" />
+               </font>
+            </Label>
+            <Label layoutX="1.0" layoutY="-7.0" prefHeight="33.0" prefWidth="52.0" text="featured" textFill="#00a2d3">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="1.0" layoutY="7.0" prefHeight="33.0" prefWidth="59.0" text="by" textFill="#00a2d3">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="btn_Home" layoutX="315.0" layoutY="20.0" mnemonicParsing="false" onAction="#GHome" prefHeight="25.0" prefWidth="59.0" style="-fx-background-color: transparent;" text="Home" textFill="#7c8184">
+               <font>
+                  <Font name="Times New Roman Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_produit" layoutX="359.0" layoutY="19.0" mnemonicParsing="false" onAction="#GProduit" onMouseClicked="#payment" prefHeight="26.0" prefWidth="95.0" style="-fx-background-color: transparent;" text="/Hotel" textFill="#1088cd">
+               <font>
+                  <Font name="Times New Roman Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_Home3" layoutX="498.0" layoutY="20.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="59.0" style="-fx-background-color: transparent;" text="G" textFill="#7c8184">
+               <font>
+                  <Font name="Times New Roman Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_Home4" layoutX="534.0" layoutY="20.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="59.0" style="-fx-background-color: transparent;" text="G" textFill="#7c8184">
+               <font>
+                  <Font name="Times New Roman Bold" size="14.0" />
+               </font>
+            </Button>
+            <TextField layoutX="711.0" layoutY="13.0" prefHeight="27.0" prefWidth="137.0" promptText="Search" style="-fx-background-color: transparent;">
+               <font>
+                  <Font name="Calibri Light" size="14.0" />
+               </font>
+            </TextField>
+            <Button fx:id="btn_sauthentifier" layoutX="831.0" layoutY="15.0" mnemonicParsing="false" onAction="#sauthentifier" style="-fx-background-color: transparent;" text="S'authentifier" textFill="#00a2d3">
+               <font>
+                  <Font name="Times New Roman Bold" size="13.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="76.0" fitWidth="68.0" layoutX="914.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Sans%20titre-1.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <ImageView fitHeight="170.0" fitWidth="180.0" layoutX="88.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Sans%20titre-1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="img" fitHeight="317.0" fitWidth="385.0" layoutX="287.0" layoutY="258.0" pickOnBounds="true" preserveRatio="true" />
+      <TextArea fx:id="textcomment" layoutX="748.0" layoutY="322.0" prefHeight="256.0" prefWidth="545.0" style="-fx-background-color: #ffe6e6;" />
+      <Label layoutX="748.0" layoutY="294.0" prefHeight="27.0" prefWidth="137.0" text="Commenter:" />
+      <Button fx:id="addcomment" layoutX="1021.0" layoutY="589.0" mnemonicParsing="false" onMouseClicked="#comment" text="Add Comment" />
+      <ScrollPane fx:id="affcomment" layoutX="87.0" layoutY="615.0" prefHeight="256.0" prefWidth="638.0" style="-fx-background-color: #ffe6e6;">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+        </content>
+      </ScrollPane>
+      <Rating fx:id="rating" layoutX="1243.0" layoutY="676.0" onMouseClicked="#rater" />
+      <Label layoutX="1045.0" layoutY="676.0" text="Donnez votre avis:" textFill="GREY">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="retour" fitHeight="64.0" fitWidth="78.0" layoutX="160.0" layoutY="146.0" onMouseClicked="#goretour" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/téléchargement%20(2).png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
