@@ -28,7 +28,7 @@ public class Pi extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
-            Parent parent = FXMLLoader.load(getClass().getResource("/Oxyvia/gui/Dashboard.fxml"));
+            Parent parent = FXMLLoader.load(getClass().getResource("/Oxyvia/gui/login.fxml"));
             Scene scene = new Scene(parent);
             primaryStage.setScene(scene);
             primaryStage.initStyle(StageStyle.UTILITY);

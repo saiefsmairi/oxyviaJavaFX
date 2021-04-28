@@ -13,23 +13,24 @@ import javafx.scene.image.ImageView;
  * @author smp
  */
 public class Depense {
-int id;
+int id ;
 String id_personnel_id ;
-String nom_prenom ;
 String email;
-String picture;
+String picture ;
 String occupation ;
 String salaire ;
 String horaire_reguliere ;
 String horaire_sup ;
 String exempte ;
-Date date_depense ;
-String enabled;
+String date_depense ;
+String nom ;
+String prenom ;
+boolean enabled ;
+String color ;
 
-    public Depense(int id, String id_personnel_id, String nom_prenom, String email, String picture, String occupation, String salaire, String horaire_reguliere, String horaire_sup, String exempte, Date date_depense, String enabled) {
+   /* public Depense(int id, String id_personnel_id, String email, String picture, String occupation, String salaire, String horaire_reguliere, String horaire_sup, String exempte, String date_depense, String nom, String prenom, boolean enabled, String color) {
         this.id = id;
         this.id_personnel_id = id_personnel_id;
-        this.nom_prenom = nom_prenom;
         this.email = email;
         this.picture = picture;
         this.occupation = occupation;
@@ -38,8 +39,113 @@ String enabled;
         this.horaire_sup = horaire_sup;
         this.exempte = exempte;
         this.date_depense = date_depense;
+        this.nom = nom;
+        this.prenom = prenom;
         this.enabled = enabled;
+        this.color = color;
+    }*/
+
+    
+
+   /* public Depense(String email, String picture, String occupation, String salaire, String horaire_reguliere, String horaire_sup, String exempte, String date_depense, String nom, String prenom) {
+        this.email = email;
+        this.picture = picture;
+        this.occupation = occupation;
+        this.salaire = salaire;
+        this.horaire_reguliere = horaire_reguliere;
+        this.horaire_sup = horaire_sup;
+        this.exempte = exempte;
+        this.date_depense = date_depense;
+        this.nom = nom;
+        this.prenom = prenom;
+    }*/
+
+   /* public Depense(String picture, String occupation, String salaire, String horaire_reguliere, String horaire_sup, String exempte, String date_depense, String nom, String prenom) {
+        this.picture = picture;
+        this.occupation = occupation;
+        this.salaire = salaire;
+        this.horaire_reguliere = horaire_reguliere;
+        this.horaire_sup = horaire_sup;
+        this.exempte = exempte;
+        this.date_depense = date_depense;
+        this.nom = nom;
+        this.prenom = prenom;
+    }*/
+
+
+   public Depense(int id, String email, String picture, String occupation, String salaire, String horaire_reguliere, String horaire_sup, String exempte, String date_depense, String nom, String prenom, boolean enabled, String color) {
+        this.id = id;
+        this.email= email;
+        this.picture = picture;
+        this.occupation = occupation;
+        this.salaire = salaire;
+        this.horaire_reguliere = horaire_reguliere;
+        this.horaire_sup = horaire_sup;
+        this.exempte = exempte;
+        this.date_depense = date_depense;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.enabled = enabled;
+        this.color = color;
     }
+
+//    public Depense(String email, String picture, String occupation, String salaire, String horaire_reguliere, String horaire_sup, String exempte, String date_depense, String nom, String prenom) {
+//        this.email=email;
+//        this.picture = picture;
+//        this.occupation = occupation;
+//        this.salaire = salaire;
+//        this.horaire_reguliere = horaire_reguliere;
+//        this.horaire_sup = horaire_sup;
+//        this.exempte = exempte;
+//        this.date_depense = date_depense;
+//        this.nom = nom;
+//        this.prenom = prenom;
+//        //this.enabled = enabled;
+//        //this.color = color;
+//    }
+
+     
+    
+
+  
+    public Depense() {
+        //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public Depense(int id, String id_personnel_id, String email, String picture, String occupation, String salaire, String horaire_reguliere, String horaire_sup, String exempte, String date_depense, String nom, String prenom, boolean enabled, String color) {
+        this.id = id;
+        this.id_personnel_id = id_personnel_id;
+        this.email = email;
+        this.picture = picture;
+        this.occupation = occupation;
+        this.salaire = salaire;
+        this.horaire_reguliere = horaire_reguliere;
+        this.horaire_sup = horaire_sup;
+        this.exempte = exempte;
+        this.date_depense = date_depense;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.enabled = enabled;
+        this.color = color;
+    }
+
+    public Depense(String email, String picture, String occupation, String salaire, String horaire_reguliere, String horaire_sup, String exempte, String date_depense, String nom, String prenom) {
+        this.email=email;
+        this.picture = picture;
+        this.occupation = occupation;
+        this.salaire = salaire;
+        this.horaire_reguliere = horaire_reguliere;
+        this.horaire_sup = horaire_sup;
+        this.exempte = exempte;
+        this.date_depense = date_depense;
+        this.nom = nom;
+        this.prenom = prenom;
+    }
+
+   
+
+   
+    
 
     public int getId() {
         return id;
@@ -49,8 +155,6 @@ String enabled;
         this.id = id;
     }
 
-    
-
     public String getId_personnel_id() {
         return id_personnel_id;
     }
@@ -59,38 +163,12 @@ String enabled;
         this.id_personnel_id = id_personnel_id;
     }
 
-    public String getNom_prenom() {
-        return nom_prenom;
-    }
-
-    public void setNom_prenom(String nom_prenom) {
-        this.nom_prenom = nom_prenom;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     public String getPicture() {
         return picture;
     }
 
     public void setPicture(String picture) {
         this.picture = picture;
-    }
-    
-    private ImageView photo= new ImageView();
-
-    public ImageView getPhoto() {
-        return photo;
-    }
-
-    public void setPhoto(ImageView photo) {
-        this.photo = photo;
     }
 
     public String getOccupation() {
@@ -133,26 +211,61 @@ String enabled;
         this.exempte = exempte;
     }
 
-    public Date getDate_depense() {
+    public String getDate_depense() {
         return date_depense;
     }
 
-    public void setDate_depense(Date date_depense) {
+    public void setDate_depense(String date_depense) {
         this.date_depense = date_depense;
     }
 
-    public String getEnabled() {
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public String getPrenom() {
+        return prenom;
+    }
+
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
+    }
+
+    public boolean isEnabled() {
         return enabled;
     }
 
-    public void setEnabled(String enabled) {
+    public void setEnabled(boolean enabled) {
         this.enabled = enabled;
     }
 
-    @Override
-    public String toString() {
-        return "Depense{" + "id_personnel_id=" + id_personnel_id + ", nom_prenom=" + nom_prenom + ", email=" + email + ", picture=" + picture + ", occupation=" + occupation + ", salaire=" + salaire + ", horaire_reguliere=" + horaire_reguliere + ", horaire_sup=" + horaire_sup + ", exempte=" + exempte + ", date_depense=" + date_depense + ", enabled=" + enabled + '}';
+    public String getColor() {
+        return color;
     }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+   
+    
+
+   
+    
+
+   
 
 
 

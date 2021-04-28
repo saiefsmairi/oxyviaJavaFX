@@ -4,7 +4,11 @@
  * and open the template in the editor.
  */
 package Oxyvia.utils;
+import Oxyvia.entities.Depense;
+import Oxyvia.entities.Facture;
   import java.sql.*;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 /**
  *
@@ -33,5 +37,55 @@ public class BDConnector {
 
 		}
 	}
+        
+        
+        
+        
+        
+        //pour recherche    
+    public static ObservableList<Depense> getDataDepense(){
+        Connection conx = driverBD();
+        ObservableList<Depense> list = FXCollections.observableArrayList();
+        try {
+            PreparedStatement ps = conx.prepareStatement("select * from depense");
+            ResultSet rs = ps.executeQuery();
+            
+            while (rs.next()){   
+                list.add(new Depense((rs.getInt("id")),rs.getString("email"), rs.getString("picture"), rs.getString("occupation"), rs.getString("salaire"), rs.getString("horaire_reguliere"), rs.getString("horaire_sup"), rs.getString("exempte"), rs.getString("date_depense"), rs.getString("nom"), rs.getString("prenom"), rs.getBoolean("enabled"), rs.getString("color")));               
+            }
+        } catch (Exception e) {
+        }
+        return list;
+    }
+    
+    public static ObservableList<Facture> getDataFacture(){
+        Connection conx = driverBD();
+        ObservableList<Facture> list = FXCollections.observableArrayList();
+        try {
+            PreparedStatement ps = conx.prepareStatement("select * from facture");
+            ResultSet rs = ps.executeQuery();
+            
+            while (rs.next()){   
+                list.add(new Facture((rs.getInt("id")), rs.getString("identifiant"), rs.getString("nom_prenom"), rs.getString("montant"), rs.getDate("date_paiement"), rs.getString("devise"), rs.getString("moyen_paiement"), rs.getString("mode_paiement"), rs.getString("location"), rs.getString("pays"), rs.getBoolean("enabled"), rs.getString("color")));               
+            }
+        } catch (Exception e) {
+        }
+        return list;
+    }
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
 }
 

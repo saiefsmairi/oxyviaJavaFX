@@ -12,12 +12,12 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="468.0" prefWidth="1006.0" style="-fx-background-color: #ffe6e6;" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="Oxyvia.gui.HomeController">
+<AnchorPane id="AnchorPane" prefHeight="747.0" prefWidth="1519.0" style="-fx-background-color: #ffe6e6;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Oxyvia.gui.HomeController">
     <stylesheets>
         <URL value="@home.css" />
     </stylesheets>
    <children>
-      <Pane layoutX="10.0" layoutY="10.0" prefHeight="64.0" prefWidth="996.0" style="-fx-background-color: #333645;">
+      <Pane prefHeight="64.0" prefWidth="1519.0" style="-fx-background-color: #333645;">
          <effect>
             <DropShadow blurType="ONE_PASS_BOX" height="10.0" radius="4.5" width="10.0">
                <color>
@@ -66,11 +66,6 @@
                   <Font name="Calibri Light" size="14.0" />
                </font>
             </TextField>
-            <Button fx:id="btn_sauthentifier" layoutX="831.0" layoutY="15.0" mnemonicParsing="false" onAction="#sauthentifier" style="-fx-background-color: transparent;" text="S'authentifier" textFill="#00a2d3">
-               <font>
-                  <Font name="Times New Roman Bold" size="13.0" />
-               </font>
-            </Button>
             <ImageView fitHeight="76.0" fitWidth="68.0" layoutX="914.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../image/Sans%20titre-1.png" />

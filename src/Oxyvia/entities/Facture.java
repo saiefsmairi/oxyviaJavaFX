@@ -14,37 +14,82 @@ import java.sql.Date;
 public class Facture {
 int id;
 String identifiant ;
+String nom_prenom;
 String montant ;
 Date date_paiement ;
 String devise ;
 String moyen_paiement ;
 String mode_paiement ;
-String type_cb ;
-String ncb;
-String code_securite ;
-Date date_expiration ;
 String location;
 String pays ;
 boolean enabled;
 String color;
 
-    public Facture(int id, String identifiant, String montant, Date date_paiement, String devise, String moyen_paiement, String mode_paiement, String type_cb, String ncb, String code_securite, Date date_expiration, String location, String pays, boolean enabled, String color) {
+
+    public Facture(int id, String identifiant, String nom_prenom, String montant, Date date_paiement, String devise, String moyen_paiement, String mode_paiement, String location, String pays, boolean enabled, String color) {
         this.id = id;
         this.identifiant = identifiant;
+        this.nom_prenom = nom_prenom;
         this.montant = montant;
         this.date_paiement = date_paiement;
         this.devise = devise;
         this.moyen_paiement = moyen_paiement;
         this.mode_paiement = mode_paiement;
-        this.type_cb = type_cb;
-        this.ncb = ncb;
-        this.code_securite = code_securite;
-        this.date_expiration = date_expiration;
         this.location = location;
         this.pays = pays;
         this.enabled = enabled;
         this.color = color;
     }
+
+    public Facture(String identifiant, String nom_prenom, String montant, Date date_paiement, String devise, String moyen_paiement, String mode_paiement,String location, String pays, boolean enabled) {
+        this.identifiant = identifiant;
+        this.nom_prenom = nom_prenom;
+        this.montant = montant;
+        this.date_paiement = date_paiement;
+        this.devise = devise;
+        this.moyen_paiement = moyen_paiement;
+        this.mode_paiement = mode_paiement;
+       
+        this.location = location;
+        this.pays = pays;
+        this.enabled = enabled;
+    }
+
+    public Facture(String identifiant, String nom_prenom, String montant, Date date_paiement, String devise, String moyen_paiement, String mode_paiement, String pays) {
+        this.identifiant = identifiant;
+        this.nom_prenom = nom_prenom;
+        this.montant = montant;
+        this.date_paiement = date_paiement;
+        this.devise = devise;
+        this.moyen_paiement = moyen_paiement;
+        this.mode_paiement = mode_paiement;
+        this.pays = pays;
+    }
+
+    
+
+   
+
+   
+
+    
+
+   
+    public Facture() {
+         //To change body of generated methods, choose Tools | Templates.
+    }
+
+    
+
+    
+
+   
+
+
+
+   
+
+    
 
     
 
@@ -54,6 +99,14 @@ String color;
 
     public void setIdentifiant(String identifiant) {
         this.identifiant = identifiant;
+    }
+
+    public String getNom_prenom() {
+        return nom_prenom;
+    }
+
+    public void setNom_prenom(String nom_prenom) {
+        this.nom_prenom = nom_prenom;
     }
 
     public String getMontant() {
@@ -104,37 +157,7 @@ String color;
         this.mode_paiement = mode_paiement;
     }
 
-    public String getType_cb() {
-        return type_cb;
-    }
-
-    public void setType_cb(String type_cb) {
-        this.type_cb = type_cb;
-    }
-
-    public String getNcb() {
-        return ncb;
-    }
-
-    public void setNcb(String ncb) {
-        this.ncb = ncb;
-    }
-
-    public String getCode_securite() {
-        return code_securite;
-    }
-
-    public void setCode_securite(String code_securite) {
-        this.code_securite = code_securite;
-    }
-
-    public Date getDate_expiration() {
-        return date_expiration;
-    }
-
-    public void setDate_expiration(Date date_expiration) {
-        this.date_expiration = date_expiration;
-    }
+   
 
     public String getLocation() {
         return location;
@@ -172,7 +195,7 @@ String color;
 
     @Override
     public String toString() {
-        return "Facture{" + "id=" + id + ", identifiant=" + identifiant + ", montant=" + montant + ", date_paiement=" + date_paiement + ", devise=" + devise + ", moyen_paiement=" + moyen_paiement + ", mode_paiement=" + mode_paiement + ", type_cb=" + type_cb + ", ncb=" + ncb + ", code_securite=" + code_securite + ", date_expiration=" + date_expiration + ", location=" + location + ", pays=" + pays + ", enabled=" + enabled + ", color=" + color + '}';
+        return "Facture{" + "id=" + id + ", identifiant=" + identifiant + ", montant=" + montant + ", date_paiement=" + date_paiement + ", devise=" + devise + ", moyen_paiement=" + moyen_paiement + ", mode_paiement=" + mode_paiement + ", location=" + location + ", pays=" + pays + ", enabled=" + enabled + ", color=" + color + '}';
     }
 
    

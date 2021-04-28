@@ -36,8 +36,6 @@ public class HomeController implements Initializable {
     private Button btn_Home3;
     @FXML
     private Button btn_Home4;
-    @FXML
-    private Button btn_sauthentifier;
 
     /**
      * Initializes the controller class.
@@ -67,9 +65,6 @@ public class HomeController implements Initializable {
     private void GProduit(ActionEvent event) {
     }
 
-    @FXML
-    private void sauthentifier(ActionEvent event) {
-    }
 
      @FXML
     private void GHome(ActionEvent event) {

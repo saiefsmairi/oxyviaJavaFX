@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="453.0" prefWidth="600.0" style="-fx-background-color: #FAEBD7;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Oxyvia.gui.StatsController">
+    <stylesheets>
+        <URL value="@stats.css" />
+    </stylesheets>
+   <children>
+      <PieChart fx:id="pieChart" layoutX="60.0" layoutY="66.0" prefHeight="369.0" prefWidth="500.0" />
+      <Text fill="BROWN" layoutX="82.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Consultaion de taux d'horaire réguliére relative aux employers " wrappingWidth="455.978515625">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

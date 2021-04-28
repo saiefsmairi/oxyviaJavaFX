@@ -15,12 +15,12 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="547.0" prefWidth="904.0" style="-fx-background-color: white;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Oxyvia.gui.DashboardController">
+<AnchorPane id="AnchorPane" prefHeight="802.0" prefWidth="1439.0" style="-fx-background-color: #F0F8FF;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Oxyvia.gui.DashboardController">
     <stylesheets>
         <URL value="@dashboard.css" />
     </stylesheets>
    <children>
-      <VBox prefHeight="600.0" prefWidth="279.0" style="-fx-background-color: #333645;" styleClass="sidebar">
+      <VBox prefHeight="802.0" prefWidth="279.0" style="-fx-background-color: #333645;" styleClass="sidebar">
          <children>
             <Label minHeight="49.0" prefHeight="49.0" prefWidth="279.0" style="-fx-background-color: #BA55D3;" text="Oxyvia Tours / Dashboard" textFill="WHITE">
                <font>
@@ -32,9 +32,9 @@
                   <Font name="Calibri Light" size="14.0" />
                </font>
             </TextField>
-            <Button fx:id="btn_GHome" mnemonicParsing="false" onAction="#GHome" style="-fx-background-color: transparent;" text="Home" textFill="#7c8184">
+            <Button fx:id="btn_GHome" mnemonicParsing="false" onAction="#GHome" style="-fx-background-color: transparent;" text="Home" textFill="DARKMAGENTA">
                <font>
-                  <Font name="Times New Roman Bold" size="13.0" />
+                  <Font name="Times New Roman Bold" size="20.0" />
                </font>
             </Button>
             <HBox prefHeight="39.0" prefWidth="249.0" style="-fx-background-color: #696969;">
@@ -44,7 +44,7 @@
                         <Image url="@../image/téléchargement%20(1).jpg" />
                      </image>
                   </ImageView>
-                  <Label onMouseClicked="#depense" text="Gestion des dépense £" textFill="ORCHID">
+                  <Label fx:id="btn_depense" onMouseClicked="#depense" text="Gestion des dépense £" textFill="ORCHID">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -63,7 +63,7 @@
                               <Image url="@../image/téléchargement%20(1).png" />
                            </image>
                         </ImageView>
-                        <Label onMouseClicked="#facture" text="Gestion des factures£" textFill="ORCHID">
+                        <Label fx:id="btn_facture" onMouseClicked="#facture" text="Gestion des factures£" textFill="ORCHID">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -75,16 +75,46 @@
                   </HBox>
                </children>
             </HBox>
-            <HBox prefHeight="39.0" prefWidth="249.0" style="-fx-background-color: #696969;" />
-            <HBox prefHeight="32.0" prefWidth="279.0" />
+            <HBox prefHeight="39.0" prefWidth="249.0" style="-fx-background-color: #696969;">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="43.0">
+                     <image>
+                        <Image url="@../image/téléchargement%20(6).png" />
+                     </image>
+                  </ImageView>
+                  <Label onMouseClicked="#stats" text="Statiqtique Dépense$" textFill="ORCHID">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+               </children></HBox>
+            <HBox prefHeight="32.0" prefWidth="279.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="43.0">
+                     <image>
+                        <Image url="@../image/téléchargement%20(4).png" />
+                     </image>
+                  </ImageView>
+                  <Label onMouseClicked="#Stats2" text="Statiqtique factures$" textFill="ORCHID">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+               </children></HBox>
             <HBox prefHeight="39.0" prefWidth="249.0" style="-fx-background-color: #696969;" />
          </children>
       </VBox>
       <VBox prefHeight="76.0" prefWidth="279.0" />
       <VBox layoutX="299.0" layoutY="52.0" prefHeight="109.0" prefWidth="188.0" style="-fx-background-color: LightSalmon;" />
-      <VBox layoutX="501.0" layoutY="54.0" prefHeight="109.0" prefWidth="181.0" style="-fx-background-color: #87CEFA;" />
-      <VBox layoutX="702.0" layoutY="53.0" prefHeight="109.0" prefWidth="181.0" style="-fx-background-color: #98FB98;" />
-      <Pane layoutX="278.0" prefHeight="49.0" prefWidth="625.0" style="-fx-background-color: #333645;">
+      <VBox layoutX="522.0" layoutY="54.0" prefHeight="109.0" prefWidth="181.0" style="-fx-background-color: #87CEFA;" />
+      <VBox layoutX="726.0" layoutY="53.0" prefHeight="109.0" prefWidth="181.0" style="-fx-background-color: #98FB98;" />
+      <Pane layoutX="278.0" prefHeight="49.0" prefWidth="1163.0" style="-fx-background-color: #333645;">
          <effect>
             <DropShadow blurType="ONE_PASS_BOX" height="10.0" radius="4.5" width="10.0">
                <color>
@@ -93,7 +123,7 @@
             </DropShadow>
          </effect>
          <children>
-            <Button fx:id="btn_Home" layoutX="208.0" layoutY="19.0" mnemonicParsing="false" onAction="#GHome" prefHeight="26.0" prefWidth="160.0" style="-fx-background-color: transparent;" text="Adminstration space" textFill="#7c8184">
+            <Button fx:id="btn_Home" layoutX="369.0" layoutY="14.0" mnemonicParsing="false" onAction="#GHome" prefHeight="26.0" prefWidth="160.0" style="-fx-background-color: transparent;" text="Adminstration space" textFill="#7c8184">
                <font>
                   <Font name="Times New Roman Bold" size="14.0" />
                </font>
@@ -103,32 +133,29 @@
                   <Font name="Times New Roman Bold" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="btn_sauthentifier" layoutX="553.0" layoutY="19.0" mnemonicParsing="false" onAction="#sauthentifier" style="-fx-background-color: transparent;" text="Logout" textFill="#00a2d3">
+            <Button fx:id="btn_sauthentifier" layoutX="1018.0" layoutY="14.0" mnemonicParsing="false" onAction="#sauthentifier" style="-fx-background-color: transparent;" text="Logout" textFill="#00a2d3">
                <font>
                   <Font name="Times New Roman Bold" size="13.0" />
                </font>
             </Button>
-            <TextField layoutX="399.0" layoutY="19.0" prefHeight="27.0" prefWidth="137.0" promptText=" Search ...." style="-fx-background-color: transparent;">
-               <font>
-                  <Font name="Calibri Light" size="14.0" />
-               </font>
-            </TextField>
-            <Button fx:id="btn_Home4" layoutX="465.0" layoutY="19.0" mnemonicParsing="false" onAction="#display" prefHeight="26.0" prefWidth="81.0" style="-fx-background-color: transparent;" text="Go home" textFill="#7c8184">
+            <Button fx:id="btn_Home4" layoutX="778.0" layoutY="12.0" mnemonicParsing="false" onAction="#display" prefHeight="26.0" prefWidth="81.0" style="-fx-background-color: transparent;" text="Go home" textFill="DARKORCHID">
                <font>
                   <Font name="Times New Roman Bold" size="14.0" />
                </font>
             </Button>
-            <ImageView fitHeight="49.0" fitWidth="52.0" layoutX="2.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="62.0" fitWidth="102.0" layoutX="2.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../image/Sans%20titre-1.png" />
                </image>
             </ImageView>
          </children>
       </Pane>
-      <ImageView fitHeight="189.0" fitWidth="215.0" layoutX="527.0" layoutY="247.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="229.0" fitWidth="447.0" layoutX="606.0" layoutY="247.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../image/OLAZ6A0.jpg" />
          </image>
       </ImageView>
+      <VBox layoutX="1160.0" layoutY="53.0" prefHeight="109.0" prefWidth="181.0" style="-fx-background-color: #9932CC;" />
+      <VBox layoutX="946.0" layoutY="54.0" prefHeight="109.0" prefWidth="181.0" style="-fx-background-color: #ffe6e6;" />
    </children>
 </AnchorPane>

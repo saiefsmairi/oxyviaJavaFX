@@ -1,59 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="676.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Oxyvia.gui.AfficheDepenseController">
+<AnchorPane id="AnchorPane" prefHeight="733.0" prefWidth="1721.0" style="-fx-background-color: #F0F8FF;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Oxyvia.gui.AfficheDepenseController">
     <stylesheets>
         <URL value="@affichedepense.css" />
     </stylesheets>
    <children>
-      <AnchorPane id="AnchorPane" layoutX="31.0" layoutY="14.0" prefHeight="479.0" prefWidth="894.0" styleClass="mainFxmlClass">
+      <AnchorPane id="AnchorPane" layoutX="-38.0" layoutY="-6.0" onMouseClicked="#dashboard" prefHeight="311.0" prefWidth="893.0" styleClass="mainFxmlClass">
          <stylesheets>
             <URL value="@affichefacture.css" />
          </stylesheets>
          <children>
-            <TableView fx:id="tableDepense" layoutX="7.0" layoutY="168.0" prefHeight="281.0" prefWidth="885.0">
+            <ImageView fitHeight="54.0" fitWidth="59.0" layoutX="1170.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="refreshTable" fitHeight="62.0" fitWidth="62.0" layoutX="230.0" layoutY="208.0" onMouseClicked="#refreshTable" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/images.jpg" />
+               </image>
+            </ImageView>
+            <TableView fx:id="tableDepense" layoutX="136.0" layoutY="355.0" prefHeight="281.0" prefWidth="1015.0">
                <columns>
-                  <TableColumn fx:id="c1Col" prefWidth="35.0" text="Num" />
-                  <TableColumn fx:id="c2Col" prefWidth="27.0" text="ID" />
-                  <TableColumn fx:id="c3Col" prefWidth="99.0" text="Nom &amp; prenom" />
-                  <TableColumn fx:id="c4Col" minWidth="4.0" prefWidth="42.0" text="Email" />
-                  <TableColumn fx:id="c5Col" prefWidth="48.0" text="Departement" />
-                  <TableColumn fx:id="c6Col" prefWidth="69.0" text="Occupation" />
-                  <TableColumn fx:id="c7Col" prefWidth="44.0" text="Salaire" />
-                  <TableColumn fx:id="c8Col" prefWidth="105.0" text="Horaire_reguliere" />
-                  <TableColumn fx:id="c9Col" prefWidth="133.0" text="Horaire suplimentaire" />
-                  <TableColumn fx:id="c10Col" prefWidth="54.0" text="Exempte" />
-                  <TableColumn fx:id="c11Col" prefWidth="46.0" text="date_depense" />
-                  <TableColumn fx:id="c12Col" prefWidth="89.0" text="Depense State" />
+                  <TableColumn fx:id="c2Col" prefWidth="86.0" text="Email" />
+                  <TableColumn fx:id="c3Col" minWidth="4.0" prefWidth="64.0" text="Last name" />
+                  <TableColumn fx:id="c4Col" prefWidth="67.0" text="fisrt name" />
+                  <TableColumn fx:id="c5Col" prefWidth="101.0" text="Tél" />
+                  <TableColumn fx:id="c6Col" prefWidth="75.0" text="Occupation" />
+                  <TableColumn fx:id="c7Col" prefWidth="65.0" text="Salary" />
+                  <TableColumn fx:id="c8Col" prefWidth="105.0" text="Regular shedule" />
+                  <TableColumn fx:id="c9Col" prefWidth="124.0" text="Additional Shedule" />
+                  <TableColumn fx:id="c10Col" prefWidth="137.0" text="Presence &amp; punctuality" />
+                  <TableColumn fx:id="c11Col" minWidth="0.0" prefWidth="96.0" text="date" />
                   <TableColumn fx:id="editCol" minWidth="0.0" prefWidth="92.0" text="Action" />
                </columns>
             </TableView>
-            <ImageView fitHeight="82.0" fitWidth="96.0" layoutX="45.0" layoutY="79.0" onMouseClicked="#addNew" pickOnBounds="true" preserveRatio="true">
+            <Button contentDisplay="CENTER" layoutX="732.0" layoutY="283.0" mnemonicParsing="false" onAction="#trier_depense" onMouseClicked="#save" prefHeight="29.0" prefWidth="73.0" style="-fx-background-color: #9932CC;" styleClass="btn" text="Sort">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Button>
+            <TableView fx:id="tablePersonnel" layoutX="831.0" layoutY="104.0" prefHeight="227.0" prefWidth="541.0">
+               <columns>
+                  <TableColumn fx:id="c2Col1" prefWidth="86.0" text="Email" />
+                  <TableColumn fx:id="c3Col1" minWidth="4.0" prefWidth="64.0" text="Last name" />
+                  <TableColumn fx:id="c4Col1" prefWidth="67.0" text="first name" />
+                  <TableColumn fx:id="c5Col1" prefWidth="101.0" text="Tél" />
+                  <TableColumn fx:id="c6Col1" prefWidth="75.0" text="Occupation" />
+                  <TableColumn fx:id="c7Col1" prefWidth="65.0" text="salary" />
+                  <TableColumn fx:id="editCol1" minWidth="0.0" prefWidth="92.0" text="Action" />
+               </columns>
+            </TableView>
+            <Pane layoutX="205.0" layoutY="-11.0" prefHeight="96.0" prefWidth="1694.0" style="-fx-background-color: #333645;">
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" height="10.0" radius="4.5" width="10.0">
+                     <color>
+                        <Color blue="1.0" green="1.0" red="1.0" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <Button fx:id="btn_produit" layoutX="191.0" layoutY="12.0" mnemonicParsing="false" onAction="#GProduit" prefHeight="26.0" prefWidth="72.0" style="-fx-background-color: transparent;" textFill="#7c8184">
+                     <font>
+                        <Font name="Times New Roman Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_sauthentifier" layoutX="1403.0" layoutY="14.0" mnemonicParsing="false" onAction="#sauthentifier" style="-fx-background-color: transparent;" text="Logout" textFill="#00a2d3">
+                     <font>
+                        <Font name="Times New Roman Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Text fill="CRIMSON" layoutX="564.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="List &amp; Handle Depense $" wrappingWidth="474.136754989624">
+                     <font>
+                        <Font name="Baskerville Old Face" size="41.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="62.0" fitWidth="102.0" layoutX="91.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/Sans%20titre-1.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="sms" fitHeight="48.0" fitWidth="48.0" layoutX="1124.0" layoutY="25.0" onMouseClicked="#sms" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/téléchargement.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="send_sms" fitHeight="48.0" fitWidth="73.0" layoutX="1055.0" layoutY="24.0" onMouseClicked="#sms_send" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/SMS-Logo-Icon-2.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="-167.0" layoutY="15.0" minHeight="49.0" prefHeight="83.0" prefWidth="258.0" style="-fx-background-color: #BA55D3;" text="Oxyvia Tours / Dashboard" textFill="WHITE">
+                     <font>
+                        <Font name="Times New Roman Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btn_Home4" layoutX="314.0" layoutY="42.0" mnemonicParsing="false" onAction="#display" prefHeight="32.0" prefWidth="81.0" style="-fx-background-color: transparent;" text="Go home" textFill="DARKORCHID">
+                     <font>
+                        <Font name="Times New Roman Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <ImageView fx:id="salarié" fitHeight="62.0" fitWidth="67.0" layoutX="146.0" layoutY="204.0" onMouseClicked="#addNew" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../image/businessman_add.png" />
                </image>
             </ImageView>
+            <TextField fx:id="filterField" layoutX="401.0" layoutY="265.0" prefHeight="26.0" prefWidth="215.0" promptText="Search...." />
+            <ImageView fitHeight="27.0" fitWidth="22.0" layoutX="590.0" layoutY="271.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/search.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
-      <Pane layoutX="9.0" layoutY="78.0" prefHeight="5.0" prefWidth="1085.0" style="-fx-background-color: black;" />
-      <Text fill="#f00000" layoutX="318.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="List &amp; Handle Depense $" wrappingWidth="474.136754989624">
-         <font>
-            <Font name="Baskerville Old Face" size="41.0" />
-         </font>
-      </Text>
-      <ImageView fitHeight="82.0" fitWidth="96.0" layoutX="175.0" layoutY="92.0" onMouseClicked="#refreshTable" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../image/images.jpg" />
-         </image>
-      </ImageView>
+      <Pane layoutX="-3.0" layoutY="78.0" prefHeight="5.0" prefWidth="1727.0" style="-fx-background-color: black;" />
+      <ImageView fitHeight="89.0" fitWidth="48.0" layoutX="1294.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>
