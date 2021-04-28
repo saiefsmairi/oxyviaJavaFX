@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication6.AjoutVoyageController">
+    <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="635.0" prefWidth="1209.0">
+         <children>
+            <BorderPane fx:id="ListeCadeauxBorderPane" prefHeight="635.0" prefWidth="1209.0" stylesheets="@../../../../../Desktop/Bon_paln%20Adnene%20LABIDI%203A23/Bon_paln/src/pidev/bonplan/ressources/css/dark-theme.css" AnchorPane.bottomAnchor="-0.20000000000004547" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-0.599999999999909" AnchorPane.topAnchor="0.0">
+               <left>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox layoutX="33.0" layoutY="-17.0" prefHeight="758.0" prefWidth="299.0" spacing="10.0" style="-fx-background-color: rgb(0, 115, 183,0.6); -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5);" styleClass="background" stylesheets="@../../../../../Desktop/Bon_paln%20Adnene%20LABIDI%203A23/Bon_paln/src/pidev/bonplan/ressources/css/dark-theme.css" AnchorPane.bottomAnchor="-105.0" AnchorPane.leftAnchor="-15.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="-17.0">
+                           <children>
+                              <VBox prefHeight="374.0" prefWidth="269.0">
+                                 <children>
+                                    <ImageView fitHeight="153.0" fitWidth="239.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/voyage.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="50.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox alignment="TOP_RIGHT" layoutX="14.0" prefHeight="635.0" prefWidth="938.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="-14.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane prefHeight="160.0" prefWidth="940.0" style="-fx-background-color: rgb(0, 115, 183,0.6); -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-background-radius: 5;">
+                                 <children>
+                                    <Pane layoutX="22.0" layoutY="-36.0" prefHeight="106.0" prefWidth="115.0" style="-fx-background-color: rgb(0, 115, 183,0.6); -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-background-radius: 4;">
+                                       <children>
+                                          <ImageView fitHeight="85.0" fitWidth="92.0" layoutX="15.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../image/search.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </Pane>
+                                    <Button layoutX="542.0" layoutY="55.0" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: rgb(0, 115, 183,0.6);" text="Search" textFill="#fffefe">
+                                       <font>
+                                          <Font name="Roboto Black" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <TextField fx:id="chercher" layoutX="150.0" layoutY="57.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyReleased="#ChercherCadeauxFonction" prefHeight="26.0" prefWidth="378.0" promptText="Rechercher ..." />
+                                    <ImageView fitHeight="45.0" fitWidth="59.0" layoutX="186.0" layoutY="94.0" onMouseClicked="#saveVoyageForupdate2" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/add.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="42.0" fitWidth="42.0" layoutX="301.0" layoutY="93.0" onMouseClicked="#updateVoyage2" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/update.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="53.0" fitWidth="53.0" layoutX="427.0" layoutY="91.0" onMouseClicked="#supprimerVoyage2" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/delete.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="50.0" />
+                                 </VBox.margin>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+        <Label layoutX="27.0" layoutY="284.0" text="Date debut" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+        <Label layoutX="27.0" layoutY="338.0" text="Date fin" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+        <Label layoutX="27.0" layoutY="386.0" text="Nom" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+        <Label layoutX="27.0" layoutY="426.0" text="Ville" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+        <TextField id="nomvoyage" fx:id="nomvoyage" layoutX="139.0" layoutY="382.0" prefHeight="25.0" prefWidth="123.0" />
+        <DatePicker id="date_debut" fx:id="datedebutvoyage" layoutX="139.0" layoutY="280.0" prefHeight="25.0" prefWidth="123.0" />
+        <DatePicker id="date_fin" fx:id="datefinvoyage" layoutX="139.0" layoutY="326.0" prefHeight="25.0" prefWidth="123.0" />
+        <TextField id="villevoyage" fx:id="villevoyage" layoutX="139.0" layoutY="422.0" prefHeight="25.0" prefWidth="123.0" />
+        <TextField id="nbpersonnevoyage" fx:id="nbpersonnevoyage" layoutX="139.0" layoutY="560.0" prefHeight="25.0" prefWidth="123.0" />
+        <TextField id="prixvoyage" fx:id="prixpersonnevoyage" layoutX="139.0" layoutY="523.0" prefHeight="25.0" prefWidth="123.0" />
+        <Label layoutX="24.0" layoutY="473.0" text="Description" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+        <Label layoutX="20.0" layoutY="527.0" text="Prix personne" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+        <Label layoutX="21.0" layoutY="564.0" text="Nombre personnes" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+        <Label layoutX="23.0" layoutY="614.0" text="Hotel" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+        <ComboBox id="hotel" fx:id="comboHotel" layoutX="141.0" layoutY="610.0" prefHeight="25.0" prefWidth="123.0" />
+        <TextField fx:id="txtaltitude" layoutX="113.0" layoutY="252.0" prefHeight="19.0" prefWidth="49.0" promptText="altitude" />
+        <TextField fx:id="txtlong" layoutX="202.0" layoutY="250.0" prefHeight="19.0" prefWidth="58.0" promptText="longitute" />
+        <TextField fx:id="txtplace1" layoutX="189.0" layoutY="222.0" prefHeight="25.0" prefWidth="88.0" promptText="Place" />
+        <Label layoutX="461.0" layoutY="14.0" prefHeight="42.0" prefWidth="315.0" text="Gestion des voyages" textFill="RED">
+            <font>
+                <Font name="Zilla Slab SemiBold" size="34.0" />
+            </font>
+        </Label>
+        <TextArea fx:id="descvoyage" layoutX="139.0" layoutY="459.0" prefHeight="45.0" prefWidth="123.0" />
+      <ButtonBar layoutX="387.0" layoutY="346.0" prefHeight="72.0" prefWidth="560.0" style="-fx-opacity: 0;">
+        <buttons>
+              <Button mnemonicParsing="false" onAction="#saveVoyageForupdate" prefHeight="45.0" prefWidth="105.0" style="-fx-background-color: #6666ff;" text="Enregistrer" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Button>
+              <Button fx:id="saveVoyageForupdate" mnemonicParsing="false" onAction="#updateVoyage" prefHeight="45.0" prefWidth="148.0" style="-fx-background-color: #6666ff;" text="Mettre à jour" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></Button>
+              <Button mnemonicParsing="false" onAction="#supprimerVoyage" prefHeight="45.0" prefWidth="105.0" style="-fx-background-color: #6666ff;" text="Supprimer" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></Button>
+      
+        </buttons>
+      </ButtonBar>
+      <ListView fx:id="listviewvoy" layoutX="405.0" layoutY="254.0" minWidth="-Infinity" orientation="HORIZONTAL" prefHeight="287.0" prefWidth="708.0" stylesheets="@style.css" />
+              <Button layoutX="408.0" layoutY="453.0" mnemonicParsing="false" onAction="#ajoutmap" prefHeight="32.0" prefWidth="105.0" style="-fx-opacity: 0;" text="Coordonnées" />
+      <Label layoutX="27.0" layoutY="223.0" text="Place" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+        <Button layoutX="338.0" layoutY="617.0" mnemonicParsing="false" onAction="#viderChamps" prefHeight="32.0" prefWidth="115.0" style="-fx-background-color: #6666ff;" text="Vider Champs" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <ImageView accessibleRole="BUTTON" fitHeight="45.0" fitWidth="45.0" layoutX="138.0" layoutY="208.0" onMouseClicked="#ajoutmap2" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/maps.jpg" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>
