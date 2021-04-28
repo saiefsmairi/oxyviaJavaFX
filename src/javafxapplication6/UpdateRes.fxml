@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="536.0" prefWidth="359.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication6.UpdateResController">
+    <children>
+      <AnchorPane layoutX="-3.0" prefHeight="536.0" prefWidth="377.0" style="-fx-background-color: #9999ff;">
+         <children>
+              <Label layoutX="35.0" layoutY="131.0" text="Date debut" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+              <Label layoutX="35.0" layoutY="185.0" text="Date fin" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+              <Label layoutX="35.0" layoutY="233.0" text="Nombre adultes" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+              <Label layoutX="35.0" layoutY="273.0" text="Nombre enfants" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+              <Label fx:id="lblchambresingle" layoutX="29.0" layoutY="327.0" text="nb chambre single" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+              <Label fx:id="lblchambredouble" layoutX="26.0" layoutY="385.0" text="nb chambre double" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Button fx:id="but" layoutX="177.0" layoutY="466.0" mnemonicParsing="false" onAction="#update" text="Mettre à jour" />
+         </children>
+      </AnchorPane>
+        <TextField id="nomvoyage" fx:id="nb_adulte" layoutX="158.0" layoutY="232.0" />
+        <DatePicker id="date_debut" fx:id="datedebutvoyage" layoutX="158.0" layoutY="130.0" prefHeight="25.0" prefWidth="149.0" />
+        <DatePicker id="date_fin" fx:id="datefinvoyage" layoutX="158.0" layoutY="176.0" prefHeight="25.0" prefWidth="149.0" />
+        <TextField id="villevoyage" fx:id="nb_enfants" layoutX="158.0" layoutY="272.0" />
+        <TextField id="nbpersonnevoyage" fx:id="txtdouble" layoutX="158.0" layoutY="384.0" />
+        <TextField id="prixvoyage" fx:id="single" layoutX="158.0" layoutY="326.0" />
+      <Label fx:id="lblreservationpour" layoutX="32.0" layoutY="54.0" text="Modification du Reservation :">
+         <font>
+            <Font name="Britannic Bold" size="20.0" />
+         </font>
+      </Label>
+   
+    
+    
+        
+    </children>
+</AnchorPane>

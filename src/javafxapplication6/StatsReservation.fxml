@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="548.0" prefWidth="1109.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication6.StatsReservationController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="50.0" layoutX="33.0" layoutY="26.0" opacity="0.35" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" width="379.0" />
+      <PieChart fx:id="chartres" layoutX="54.0" layoutY="139.0" title="Hotels les plus réservées" />
+      <BarChart fx:id="chartprix" layoutX="528.0" layoutY="163.0" title="Total Des prix de réservation pour chaque mois">
+        <xAxis>
+          <CategoryAxis fx:id="mois" label="Mois" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="prix" label="Prix Total en DT" side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <Label layoutX="50.0" layoutY="31.0" text="Statistiques des réservations :" textFill="RED">
+         <font>
+            <Font name="Berlin Sans FB" size="29.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
