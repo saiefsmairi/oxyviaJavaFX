@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="732.0" prefWidth="1500.0" style="-fx-background-color: #F0F8FF;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Oxyvia.gui.AfficheFactureController">
+    <stylesheets>
+        <URL value="@affichefacture.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="tableFacture" layoutX="337.0" layoutY="320.0" prefHeight="311.0" prefWidth="927.0">
+        <columns>
+          <TableColumn fx:id="c2Col" minWidth="6.0" prefWidth="126.0" text="CIN / passport" />
+            <TableColumn fx:id="c3Col" prefWidth="144.0" text="First name &amp; last name " />
+            <TableColumn fx:id="c4Col" minWidth="8.0" prefWidth="64.0" text="amount" />
+            <TableColumn fx:id="c5Col" prefWidth="108.0" text="date" />
+            <TableColumn fx:id="c6Col" minWidth="7.0" prefWidth="75.0" text="currency" />
+            <TableColumn fx:id="c7Col" minWidth="7.0" prefWidth="118.0" text="means of payment" />
+            <TableColumn fx:id="c8Col" minWidth="0.0" prefWidth="114.0" text="payment method" />
+            <TableColumn fx:id="c14Col" prefWidth="69.0" text="country" />
+            <TableColumn fx:id="editCol" minWidth="0.0" prefWidth="95.0" text="Action" />
+        </columns>
+      </TableView>
+      <Pane layoutX="-1.0" layoutY="68.0" prefHeight="5.0" prefWidth="1085.0" style="-fx-background-color: black;" />
+      <ImageView fitHeight="50.0" fitWidth="60.0" layoutX="347.0" layoutY="191.0" onMouseClicked="#addNew" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/téléchargement%20(2).jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="411.0" layoutY="192.0" onMouseClicked="#refreshTable" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/téléchargement%20(3).jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="100.0" fitWidth="155.0" layoutX="800.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/payer-concept-factures_1325-175.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="filterField" layoutX="597.0" layoutY="245.0" prefHeight="25.0" prefWidth="201.0" promptText="Search...." />
+      <ImageView fitHeight="27.0" fitWidth="22.0" layoutX="775.0" layoutY="247.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/search.png" />
+         </image>
+      </ImageView>
+      <Button contentDisplay="CENTER" layoutX="1003.0" layoutY="234.0" mnemonicParsing="false" onAction="#trier_facture" onMouseClicked="#save" prefHeight="29.0" prefWidth="73.0" style="-fx-background-color: #6495ED;" styleClass="btn" text="Trier">
+         <font>
+            <Font name="Century Gothic" size="15.0" />
+         </font>
+      </Button>
+      <Pane layoutX="262.0" layoutY="-1.0" prefHeight="84.0" prefWidth="1645.0" style="-fx-background-color: #333645;">
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" height="10.0" radius="4.5" width="10.0">
+               <color>
+                  <Color blue="1.0" green="1.0" red="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+         <children>
+            <Button fx:id="btn_produit" layoutX="191.0" layoutY="12.0" mnemonicParsing="false" onAction="#GProduit" prefHeight="26.0" prefWidth="72.0" style="-fx-background-color: transparent;" textFill="#7c8184">
+               <font>
+                  <Font name="Times New Roman Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_sauthentifier" layoutX="1403.0" layoutY="46.0" mnemonicParsing="false" onAction="#sauthentifier" style="-fx-background-color: transparent;" text="Logout" textFill="#00a2d3">
+               <font>
+                  <Font name="Times New Roman Bold" size="13.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="62.0" fitWidth="102.0" layoutX="8.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Sans%20titre-1.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btn_Home41" layoutX="161.0" layoutY="42.0" mnemonicParsing="false" onAction="#display" prefHeight="32.0" prefWidth="81.0" style="-fx-background-color: transparent;" text="Go home" textFill="DARKORCHID">
+               <font>
+                  <Font name="Times New Roman Bold" size="14.0" />
+               </font>
+            </Button>
+            <Text fill="#f00000" layoutX="351.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="List &amp; Handle Factures £" wrappingWidth="474.136754989624">
+               <font>
+                  <Font name="Baskerville Old Face" size="41.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <VBox prefHeight="802.0" prefWidth="279.0" style="-fx-background-color: #333645;" styleClass="sidebar">
+         <children>
+            <Label minHeight="49.0" prefHeight="49.0" prefWidth="279.0" style="-fx-background-color: #BA55D3;" text="Oxyvia Tours / Dashboard" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="22.0" />
+               </font>
+            </Label>
+            <TextField prefHeight="20.0" prefWidth="300.0" promptText="Search" style="-fx-background-color: transparent;">
+               <font>
+                  <Font name="Calibri Light" size="14.0" />
+               </font>
+            </TextField>
+            <Button fx:id="btn_GHome" mnemonicParsing="false" onAction="#GHome" prefHeight="37.0" prefWidth="279.0" style="-fx-background-color: transparent;" text="Home/comptability corner " textFill="DARKMAGENTA">
+               <font>
+                  <Font name="Times New Roman Bold" size="20.0" />
+               </font>
+            </Button>
+            <HBox prefHeight="39.0" prefWidth="249.0" style="-fx-background-color: #696969;">
+               <children>
+                  <ImageView fitHeight="49.0" fitWidth="43.0">
+                     <image>
+                        <Image url="@../image/téléchargement%20(1).jpg" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="btn_depense" onMouseClicked="#depense" text="Expense management £" textFill="ORCHID">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="39.0" prefWidth="249.0">
+               <children>
+                  <HBox prefHeight="50.0" prefWidth="279.0">
+                     <children>
+                        <ImageView fitHeight="50.0" fitWidth="43.0">
+                           <image>
+                              <Image url="@../image/téléchargement%20(1).png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="btn_facture" onMouseClicked="#facture" text="Fact managment £" textFill="ORCHID">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="39.0" prefWidth="249.0" style="-fx-background-color: #696969;">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="43.0">
+                     <image>
+                        <Image url="@../image/téléchargement%20(6).png" />
+                     </image>
+                  </ImageView>
+                  <Label onMouseClicked="#stats" text="Expenditure statistic$" textFill="ORCHID">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="32.0" prefWidth="279.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="43.0">
+                     <image>
+                        <Image url="@../image/téléchargement%20(4).png" />
+                     </image>
+                  </ImageView>
+                  <Label onMouseClicked="#Stats2" text="Invoice statistic $" textFill="ORCHID">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="39.0" prefWidth="249.0" style="-fx-background-color: #696969;" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
