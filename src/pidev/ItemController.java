@@ -20,11 +20,15 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+import javafxapplication6.AjoutReservationController;
 import org.controlsfx.control.Rating;
 
 /**
@@ -36,13 +40,9 @@ public class ItemController {
 
     @FXML
     private ImageView img;
-   
 
- public List <Chambre> listchambres;
+    public List<Chambre> listchambres;
 
-    
-
-   
     @FXML
     private Label nameLabel;
     @FXML
@@ -58,59 +58,72 @@ public class ItemController {
     private Label labelid;
     @FXML
     private Button btncomment;
-     
-    private HotelController hh; 
+
+    private HotelController hh;
     @FXML
     private Rating rating;
+    private Hotel h;
 
     public void setData(Hotel hotel) throws SQLException {
-        HotelService s=new HotelService();
-        
+        HotelService s = new HotelService();
+
         this.Hotel = hotel;
-                        labelid.setText(String.valueOf(hotel.getId()));
-                        
+        labelid.setText(String.valueOf(hotel.getId()));
 
-
-
-        
-        nameLabel.setText("Nom:"+" "+hotel.getName());
-        paysLable.setText("Pays:"+" "+hotel.getPays());
-        adresselabel.setText("ADRESSE:"+" "+hotel.getAdresse());
-        emailnumlabel.setText("CONTACT:EMAIL:"+" "+hotel.getEmail()+"/"+
-                "NUMERO:"+hotel.getNum());
+        nameLabel.setText("Nom:" + " " + hotel.getName());
+        paysLable.setText("Pays:" + " " + hotel.getPays());
+        adresselabel.setText("ADRESSE:" + " " + hotel.getAdresse());
+        emailnumlabel.setText("CONTACT:EMAIL:" + " " + hotel.getEmail() + "/"
+                + "NUMERO:" + hotel.getNum());
         rating.setRating(s.moyenneratingparhotel(hotel.getId()));
-        String imgg= hotel.getImage();
-        String ch="/images/";
-        String imgF= ch+imgg;
-        
-        Image imageF = new Image("ftp://user:123456789@192.168.1.13/"+hotel.getImage());
+        String imgg = hotel.getImage();
+        String ch = "/images/";
+        String imgF = ch + imgg;
+h=hotel;
+        Image imageF = new Image("ftp://user:123456789@192.168.1.13/" + hotel.getImage());
         img.setImage(imageF);
-          
-        
-    }
 
-  
+    }
 
     @FXML
     private void gotochambre(MouseEvent event) throws IOException {
 
+        chambrestatic.id = Integer.parseInt(labelid.getText());
 
-       chambrestatic.id=Integer.parseInt(labelid.getText());
-       
-
-         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("homechambre.fxml"));
-            Parent root = (Parent) fxmlLoader.load();
-            btnaffchambre.getScene().setRoot(root);
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("homechambre.fxml"));
+        Parent root = (Parent) fxmlLoader.load();
+        btnaffchambre.getScene().setRoot(root);
     }
 
     @FXML
     private void gotocomment(MouseEvent event) throws IOException {
-        Hotel.id1=Integer.parseInt(labelid.getText());
+        Hotel.id1 = Integer.parseInt(labelid.getText());
         System.out.println(Hotel.id1);
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("single.fxml"));
-            Parent root = (Parent) fxmlLoader.load();
-            btncomment.getScene().setRoot(root);
+        Parent root = (Parent) fxmlLoader.load();
+        btncomment.getScene().setRoot(root);
     }
-    
-    
+
+    @FXML
+    private void reserverVoyageBtn(ActionEvent event) throws IOException {
+        System.out.println("clicked"+h);
+        FXMLLoader loader = new FXMLLoader(
+                getClass().getResource(
+                        "/javafxapplication6/AjoutReservation.fxml"
+                )
+        );
+
+        Stage stage = new Stage(StageStyle.DECORATED);
+        stage.setScene(
+                new Scene(loader.load())
+        );
+
+        AjoutReservationController controller = loader.getController();
+        controller.initData2(h);
+
+        ///button resever works now i have to insert res hotel to db
+        stage.show();
+
+    }
+
 }

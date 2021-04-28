@@ -15,6 +15,7 @@ public class Chambre {
     private String type;
     private long prix; 
     private String image;
+    private String occupe;
    // private Hotel idh; 
 private int idh;
 
@@ -22,8 +23,16 @@ private int idh;
   public Chambre() {
     }
 
+    public String getOccupe() {
+        return occupe;
+    }
 
- public Chambre(int numero, String type, long prix, String image,int idh) {
+    public void setOccupe(String occupe) {
+        this.occupe = occupe;
+    }
+
+
+ public Chambre(int numero, String type, long prix, String image,int idh , String occupe) {
              this.id = id;
 
         this.numero = numero;
@@ -31,6 +40,7 @@ private int idh;
         this.prix = prix;
         this.image = image;
         this.idh = idh;
+        this.occupe=occupe;
         
     }
 

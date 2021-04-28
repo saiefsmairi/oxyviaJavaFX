@@ -117,7 +117,21 @@ public class DashboardController implements Initializable {
     }
 
     @FXML
-    private void gototransport(ActionEvent event) {
+    private void gototransport(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/javafxapplication6/GestionRes.fxml"));
+            Parent root = (Parent) fxmlLoader.load();
+            btn_Home.getScene().setRoot(root);
+        
+    }
+
+    @FXML
+    private void voyage(MouseEvent event) throws IOException {
+        
+         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/javafxapplication6/AjoutVoyage.fxml"));
+            Parent root = (Parent) fxmlLoader.load();
+            btn_Home.getScene().setRoot(root);
+        
+        
     }
     
 }

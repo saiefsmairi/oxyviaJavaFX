@@ -275,7 +275,7 @@ ObservableList<String> list1;
         else{
         FtpUpload ftp= new FtpUpload();
           ftp.Upload(url, nom);
-         Chambre H=new Chambre(Integer.parseInt(numerotext.getText()),typetext.getValue(),Long.parseLong(prixtext.getText()),imagetext.getText(),hots.getIdNom(hoteltext.getValue()));
+         Chambre H=new Chambre(Integer.parseInt(numerotext.getText()),typetext.getValue(),Long.parseLong(prixtext.getText()),imagetext.getText(),hots.getIdNom(hoteltext.getValue()),"non occupe");
          hs.Ajouter(H);
           this.initForm();
           this.aa();

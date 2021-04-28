@@ -13,7 +13,7 @@ import java.sql.DriverManager;
  * @author USER
  */
 public class Singleton {
-     private static String url = "jdbc:mysql://localhost:3306/pidev";
+     private static String url = "jdbc:mysql://localhost:3306/pidev355";
     private static String user = "root";
     private static String passwd = "";
     private static Connection conn;

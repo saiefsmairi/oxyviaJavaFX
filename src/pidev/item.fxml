@@ -15,6 +15,7 @@
          <children>
             <HBox prefHeight="51.0" prefWidth="185.0" />
             <ImageView fx:id="img" fitHeight="375.0" fitWidth="323.0" pickOnBounds="true" preserveRatio="true" />
+            <Button mnemonicParsing="false" onAction="#reserverVoyageBtn" prefHeight="26.0" prefWidth="106.0" text="Réserver" />
          </children>
       </VBox>
       <Label fx:id="nameLabel" layoutX="336.0" layoutY="14.0" prefHeight="49.0" prefWidth="234.0">
@@ -27,7 +28,7 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <Label fx:id="emailnumlabel" layoutX="1.0" layoutY="392.0" prefHeight="126.0" prefWidth="585.0">
+      <Label fx:id="emailnumlabel" layoutX="1.0" layoutY="452.0" prefHeight="66.0" prefWidth="586.0">
          <font>
             <Font size="20.0" />
          </font>

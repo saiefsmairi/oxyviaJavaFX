@@ -21,7 +21,7 @@ public class JavaFXApplication6 extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("Dashboard.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("AjoutVoyage.fxml"));
 
         Scene scene = new Scene(root);
 

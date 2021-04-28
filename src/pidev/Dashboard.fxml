@@ -90,7 +90,7 @@
                           <items>
                             <MenuItem fx:id="btnhotel" mnemonicParsing="false" onAction="#gotohotel" style="-fx-background-color: orchid;" text="Gestions des hotels" />
                             <MenuItem fx:id="btnchambre" mnemonicParsing="false" onAction="#gotochambre" style="-fx-background-color: orchid;" text="Gestion des chambres" />
-                              <MenuItem fx:id="btntransport" mnemonicParsing="false" onAction="#gototransport" style="-fx-background-color: orchid;" text="Gestion des transports" />
+                              <MenuItem fx:id="btntransport" mnemonicParsing="false" onAction="#gototransport" style="-fx-background-color: orchid;" text="Gestion des réservations" />
                           </items>
                            <font>
                               <Font size="14.0" />
@@ -99,7 +99,7 @@
                      </children>
                   </HBox>
                </children></HBox>
-            <HBox prefHeight="39.0" prefWidth="249.0" style="-fx-background-color: #696969;" />
+            <HBox prefHeight="0.0" prefWidth="279.0" style="-fx-background-color: #696969;" />
             <HBox prefHeight="50.0" prefWidth="279.0">
                <children>
                   <ImageView fitHeight="50.0" fitWidth="43.0">
@@ -107,6 +107,14 @@
                         <Image url="@../image/téléchargement%20(1).png" />
                      </image>
                   </ImageView>
+                  <Label onMouseClicked="#voyage" text="Gestion des Voyages" textFill="ORCHID">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
                </children>
             </HBox>
          </children>

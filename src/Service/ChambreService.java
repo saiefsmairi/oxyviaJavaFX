@@ -24,15 +24,17 @@ public  class ChambreService implements IService<Chambre> {
     @Override
     public void Ajouter(Chambre e) {
         try {
-            PreparedStatement preparedStmt = con.prepareStatement("insert into chambre (numero,type,prix,idhotel_id,image) values (?,?,?,?,?)");
+            PreparedStatement preparedStmt = con.prepareStatement("insert into chambre (numero,type,prix,idhotel_id,image,occupe) values (?,?,?,?,?,?)");
 
             preparedStmt.setInt(1, e.getNumero());
             preparedStmt.setString(2, e.getType());
             preparedStmt.setLong(3, e.getPrix());
             preparedStmt.setInt(4, e.getIdh());        
             preparedStmt.setString(5, e.getImage());
+             preparedStmt.setString(6, e.getOccupe());
 
-           
+                      
+
 
             preparedStmt.execute();
             System.out.println("Insertion Avec Succes");

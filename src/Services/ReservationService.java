@@ -5,7 +5,7 @@
  */
 package Services;
 
-import Entities.Hotel;
+import Entity.Hotel;
 import Entities.Place;
 import Entities.Reservation;
 import Entities.Voyage;

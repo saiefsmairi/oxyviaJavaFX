@@ -97,7 +97,7 @@ public class ListeHotelsController implements Initializable {
   );
 
   AjoutReservationController controller = loader.getController();
-  controller.initData2(voyagetable.getSelectionModel().getSelectedItem());
+  //controller.initData2(voyagetable.getSelectionModel().getSelectedItem());
 
   ///button resever works now i have to insert res hotel to db
   stage.show();

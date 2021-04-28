@@ -144,10 +144,49 @@ public class GestionResController implements Initializable {
 
     @FXML
     private void supp1(ActionEvent event) throws IOException {
-
+        System.out.println("heee"+resclick.getId());
         resservice.supprimerRes(resclick.getId());
 
-        loadDate();
+        fruits = resservice.AfficherReservation();
+        myListener = new MyListener() {
+            @Override
+            public void onClickListener(Reservation res) {
+                resclick = res;
+                System.out.println(res);
+            }
+        };
+        int column = 0;
+        int row = 1;
+        try {
+            for (int i = 0; i < fruits.size(); i++) {
+                FXMLLoader fxmlLoader = new FXMLLoader();
+                fxmlLoader.setLocation(getClass().getResource("item.fxml"));
+                AnchorPane anchorPane = fxmlLoader.load();
+
+                ItemController itemController = fxmlLoader.getController();
+                itemController.setData(fruits.get(i), myListener);
+
+                if (column == 3) {
+                    column = 0;
+                    row++;
+                }
+
+                grid.add(anchorPane, column++, row); //(child,column,row)
+                //set grid width
+                grid.setMinWidth(Region.USE_COMPUTED_SIZE);
+                grid.setPrefWidth(Region.USE_COMPUTED_SIZE);
+                grid.setMaxWidth(Region.USE_PREF_SIZE);
+
+                //set grid height
+                grid.setMinHeight(Region.USE_COMPUTED_SIZE);
+                grid.setPrefHeight(Region.USE_COMPUTED_SIZE);
+                grid.setMaxHeight(Region.USE_PREF_SIZE);
+
+                GridPane.setMargin(anchorPane, new Insets(10));
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML

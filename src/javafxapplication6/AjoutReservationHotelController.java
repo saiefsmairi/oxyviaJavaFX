@@ -5,15 +5,11 @@
  */
 package javafxapplication6;
 
-import Entities.Hotel;
+import Entity.Hotel;
 import Entities.Reservation;
 import Entities.Voyage;
 import Services.ReservationService;
-import com.jfoenix.controls.JFXButton;
-import com.jfoenix.controls.JFXComboBox;
-import com.jfoenix.controls.JFXTextArea;
-import com.jfoenix.controls.JFXTextField;
-import com.jfoenix.controls.JFXTimePicker;
+
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.ResourceBundle;

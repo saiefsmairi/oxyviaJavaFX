@@ -133,6 +133,11 @@ public class Hotel {
     public void setLng(long lng) {
         this.lng = lng;
     }
+
+    @Override
+    public String toString() {
+        return "Hotel{" + "id=" + id + ", name=" + name + ", pays=" + pays + ", adresse=" + adresse + ", nbEtoile=" + nbEtoile + ", num=" + num + ", email=" + email + ", image=" + image + ", lat=" + lat + ", lng=" + lng + '}';
+    }
     
     
     

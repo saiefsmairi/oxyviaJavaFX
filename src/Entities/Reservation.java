@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package Entities;
-
+import Entity.Hotel;
 /**
  *
  * @author PC-Saif
@@ -26,6 +26,8 @@ public class Reservation {
     private Voyage voyage; 
     private String nomHotel;
 private int prix;
+
+  
 
     public int getPrix() {
         return prix;
