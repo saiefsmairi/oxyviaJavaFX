@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="568.0" prefWidth="798.0" style="-fx-background-color: #F0F8FF;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Oxyvia.gui.AddDepenseController">
+    <stylesheets>
+        <URL value="@adddepense.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane fx:id="pane_login" layoutX="14.0" layoutY="14.0" prefHeight="571.0" prefWidth="459.0">
+         <children>
+            <TextField fx:id="FC13" layoutX="275.0" layoutY="492.0" prefHeight="56.0" prefWidth="149.0" promptText="-----------------------------------------------------------------" />
+            <ComboBox fx:id="FC1" layoutX="277.0" layoutY="64.0" prefWidth="150.0" />
+            <TextField fx:id="FC2" layoutX="278.0" layoutY="107.0" />
+            <TextField fx:id="FC3" layoutX="275.0" layoutY="146.0" />
+            <ComboBox fx:id="FC7" layoutX="274.0" layoutY="327.0" prefWidth="150.0" />
+            <TextField fx:id="FC9" layoutX="271.0" layoutY="410.0" />
+            <TextField fx:id="FC10" layoutX="273.0" layoutY="448.0" />
+            <TextField fx:id="FC4" layoutX="276.0" layoutY="193.0" />
+            <ComboBox fx:id="FC5" layoutX="276.0" layoutY="234.0" prefWidth="150.0" />
+            <ComboBox fx:id="FC6" layoutX="277.0" layoutY="281.0" prefWidth="150.0" />
+            <DatePicker fx:id="FC8" layoutX="272.0" layoutY="367.0" />
+            <Text fontSmoothingType="LCD" layoutX="65.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" *Depense Details*" wrappingWidth="285.5416566133499">
+               <font>
+                  <Font name="Bauhaus 93" size="32.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="48.0" fitWidth="59.0" layoutX="363.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/téléchargement%20(3).png" />
+               </image>
+            </ImageView>
+            <Text layoutX="27.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
+               <font>
+                  <Font name="Blackadder ITC" size="23.0" />
+               </font>
+            </Text>
+            <Text layoutX="29.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tél Number">
+               <font>
+                  <Font name="Blackadder ITC" size="23.0" />
+               </font>
+            </Text>
+            <Text layoutX="30.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Occupation">
+               <font>
+                  <Font name="Blackadder ITC" size="23.0" />
+               </font>
+            </Text>
+            <Text layoutX="32.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Salary">
+               <font>
+                  <Font name="Blackadder ITC" size="23.0" />
+               </font>
+            </Text>
+            <Text layoutX="25.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Regular shedule">
+               <font>
+                  <Font name="Blackadder ITC" size="23.0" />
+               </font>
+            </Text>
+            <Text layoutX="20.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Additional Shedule">
+               <font>
+                  <Font name="Blackadder ITC" size="23.0" />
+               </font>
+            </Text>
+            <Text layoutX="19.0" layoutY="349.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Presence &amp; punctuality">
+               <font>
+                  <Font name="Blackadder ITC" size="23.0" />
+               </font>
+            </Text>
+            <Text layoutX="20.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Expenditure date ">
+               <font>
+                  <Font name="Blackadder ITC" size="23.0" />
+               </font>
+            </Text>
+            <Text layoutX="30.0" layoutY="429.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name ">
+               <font>
+                  <Font name="Blackadder ITC" size="23.0" />
+               </font>
+            </Text>
+            <Text layoutX="29.0" layoutY="471.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name">
+               <font>
+                  <Font name="Blackadder ITC" size="23.0" />
+               </font>
+            </Text>
+            <Text layoutX="33.0" layoutY="514.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FeedBack  ">
+               <font>
+                  <Font name="Blackadder ITC" size="23.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <Text layoutX="57.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Button fx:id="start" contentDisplay="CENTER" layoutX="601.0" layoutY="14.0" mnemonicParsing="false" onAction="#payer2" onMouseClicked="#save" prefHeight="41.0" prefWidth="183.0" style="-fx-background-color: #FF8C00;" styleClass="btn" text="Strat Spending">
+         <font>
+            <Font name="Century Gothic" size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="pdf" contentDisplay="CENTER" layoutX="657.0" layoutY="440.0" mnemonicParsing="false" onAction="#print" onMouseClicked="#save" prefHeight="41.0" prefWidth="123.0" style="-fx-background-color: #FFFF00;" styleClass="btn" text="Print pdf">
+         <font>
+            <Font name="Century Gothic" size="21.0" />
+         </font>
+      </Button>
+      <Button contentDisplay="CENTER" layoutX="660.0" layoutY="385.0" mnemonicParsing="false" onMouseClicked="#save" prefHeight="37.0" prefWidth="108.0" style="-fx-background-color: #00E676;" styleClass="btn" text="Save">
+         <font>
+            <Font name="Century Gothic" size="21.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="imgg" fitHeight="150.0" fitWidth="203.0" layoutX="478.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/png-clipart-teacher-education-student-course-school-avatar-child-face.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F0F8FF;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Oxyvia.gui.SmsController">
+    <stylesheets>
+        <URL value="@sms.css" />
+    </stylesheets>
+   <children>
+      <GridPane layoutX="209.0" layoutY="8.0" prefHeight="391.0" prefWidth="247.0" style="-fx-border-color: #6575E8; -fx-border-width: 3; -fx-border-radius: 30;">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.6666463216146" minWidth="10.0" prefWidth="121.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="287.3333435058594" minWidth="10.0" prefWidth="120.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="156.0" minHeight="10.0" prefHeight="81.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="156.0" minHeight="4.0" prefHeight="7.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="156.0" minHeight="5.0" prefHeight="120.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="156.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="213.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="262.0" minHeight="10.0" prefHeight="185.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Text fill="#19011e" strokeType="OUTSIDE" strokeWidth="0.0" text="Tél number " wrappingWidth="112.11376953125">
+               <font>
+                  <Font name="Times New Roman Bold" size="13.0" />
+               </font>
+            </Text>
+            <TextField fx:id="numT" prefHeight="25.0" prefWidth="128.0" GridPane.columnIndex="1" />
+            <BorderPane prefHeight="118.0" prefWidth="140.0" GridPane.rowIndex="2">
+               <left>
+                  <Text fill="#19011e" strokeType="OUTSIDE" strokeWidth="0.0" text=" Message" wrappingWidth="112.11376953125" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="Times New Roman Bold" size="13.0" />
+                     </font>
+                  </Text>
+               </left>
+            </BorderPane>
+            <Label fx:id="erreurTitre" prefHeight="24.0" prefWidth="254.0" textFill="#c92020" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Calibri Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textF" prefHeight="86.0" prefWidth="124.0" promptText="write message------------------------------" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ImageView fx:id="imgg" fitHeight="147.0" fitWidth="129.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="5">
+               <image>
+                  <Image url="@../image/images.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="sms" contentDisplay="CENTER" mnemonicParsing="false" onAction="#sms" prefHeight="24.0" prefWidth="86.0" style="-fx-background-color: #00E676;" styleClass="btn" text="Send" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <font>
+                  <Font name="Century Gothic" size="21.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
