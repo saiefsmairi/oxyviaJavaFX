@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="JavaFXApplication6.jnlp">
+  <information>
+    <title>JavaFXApplication6</title>
+    <vendor>PC-Saif</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="JavaFXApplication6.jar" size="5917833" download="eager" />
+    <jar href="lib\GMapsFX-2.12.0.jar" size="207618" download="eager" />
+    <jar href="lib\client-6.2.0.jar" size="370984" download="eager" />
+    <jar href="lib\commons-codec-1.11.jar" size="335042" download="eager" />
+    <jar href="lib\commons-logging-1.2.jar" size="61829" download="eager" />
+    <jar href="lib\controlsfx-8.40.11.jar" size="985420" download="eager" />
+    <jar href="lib\google-maps-services-0.18.0.jar" size="226743" download="eager" />
+    <jar href="lib\grpc-context-1.25.0.jar" size="30096" download="eager" />
+    <jar href="lib\gson-2.8.6.jar" size="240255" download="eager" />
+    <jar href="lib\httpclient-4.5.13.jar" size="780321" download="eager" />
+    <jar href="lib\httpcore-4.4.13.jar" size="328593" download="eager" />
+    <jar href="lib\jackson-annotations-2.12.3.jar" size="75703" download="eager" />
+    <jar href="lib\jackson-core-2.12.3.jar" size="365220" download="eager" />
+    <jar href="lib\jackson-databind-2.12.3.jar" size="1515756" download="eager" />
+    <jar href="lib\javafx-swt.jar" size="37110" download="eager" />
+    <jar href="lib\javafx.base.jar" size="745586" download="eager" />
+    <jar href="lib\javafx.controls.jar" size="2530159" download="eager" />
+    <jar href="lib\javafx.fxml.jar" size="128845" download="eager" />
+    <jar href="lib\javafx.graphics.jar" size="4298389" download="eager" />
+    <jar href="lib\javafx.media.jar" size="266985" download="eager" />
+    <jar href="lib\javafx.swing.jar" size="88752" download="eager" />
+    <jar href="lib\javafx.web.jar" size="702117" download="eager" />
+    <jar href="lib\jfoenix-8.0.10 (1).jar" size="2710207" download="eager" />
+    <jar href="lib\jfoenix-9.0.10 (2).jar" size="2432549" download="eager" />
+    <jar href="lib\jfoenix-9.0.10.jar" size="2432549" download="eager" />
+    <jar href="lib\logback-classic-1.2.1.jar" size="310442" download="eager" />
+    <jar href="lib\logback-core-1.2.1.jar" size="473113" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.42-bin.jar" size="996444" download="eager" />
+    <jar href="lib\okhttp-3.14.4.jar" size="425974" download="eager" />
+    <jar href="lib\okio-1.17.2.jar" size="91980" download="eager" />
+    <jar href="lib\opencensus-api-0.25.0.jar" size="351670" download="eager" />
+    <jar href="lib\slf4j-api-1.7.23.jar" size="41105" download="eager" />
+    <jar href="lib\slf4j-api-1.7.26.jar" size="41139" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="javafxapplication6.JavaFXApplication6"  name="JavaFXApplication6" />
+  <update check="always"/>
+</jnlp>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane onMousePressed="#click" prefHeight="413.0" prefWidth="256.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication6.ItemController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutY="1.0" prefHeight="437.0" prefWidth="254.0" AnchorPane.bottomAnchor="-25.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="1.0">
+         <children>
+            <HBox prefHeight="25.0" prefWidth="214.0">
+               <children>
+                  <ImageView fitHeight="41.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/date.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label fx:id="dd" alignment="CENTER" prefHeight="49.0" prefWidth="137.0" text="datefin">
+                     <font>
+                        <Font name="Cambria" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox layoutX="15.0" layoutY="102.0" prefHeight="51.0" prefWidth="185.0">
+         <children>
+            <ImageView fitHeight="47.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/single.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="sinlge" alignment="CENTER" prefHeight="49.0" prefWidth="137.0" text="single">
+               <font>
+                  <Font name="Cambria" size="15" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox layoutX="13.0" layoutY="151.0" prefHeight="51.0" prefWidth="185.0">
+         <children>
+            <ImageView fitHeight="44.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/double.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="doubletxt" alignment="CENTER" prefHeight="49.0" prefWidth="137.0" text="double">
+               <font>
+                  <Font name="Cambria" size="15" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox layoutX="15.0" layoutY="210.0" prefHeight="51.0" prefWidth="185.0">
+         <children>
+            <ImageView fitHeight="42.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/adult.jpg" />
+               </image>
+            </ImageView>
+            <Label fx:id="adulte" alignment="CENTER" prefHeight="49.0" prefWidth="137.0" text="adulte">
+               <font>
+                  <Font name="Cambria" size="15" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox layoutX="15.0" layoutY="271.0" prefHeight="51.0" prefWidth="185.0">
+         <children>
+            <ImageView fitHeight="40.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/kids.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="enfants" alignment="CENTER" prefHeight="49.0" prefWidth="137.0" text="enfants">
+               <font>
+                  <Font name="Cambria" size="15" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox layoutX="17.0" layoutY="324.0" prefHeight="51.0" prefWidth="185.0">
+         <children>
+            <ImageView fitHeight="37.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/money.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="prixval" alignment="CENTER" prefHeight="49.0" prefWidth="137.0" text="prix">
+               <font>
+                  <Font name="Cambria" size="15" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox layoutX="15.0" layoutY="51.0" prefHeight="25.0" prefWidth="214.0">
+         <children>
+            <ImageView fitHeight="41.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/date.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="df" alignment="CENTER" prefHeight="49.0" prefWidth="137.0" text="datefin">
+               <font>
+                  <Font name="Cambria" size="15" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox layoutX="14.0" layoutY="362.0" prefHeight="51.0" prefWidth="185.0">
+         <children>
+            <ImageView fitHeight="48.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/hotel.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="nomhotel" alignment="CENTER" prefHeight="49.0" prefWidth="137.0" text="prix">
+               <font>
+                  <Font name="Cambria" size="15" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <AnchorPane layoutX="198.0" layoutY="-1.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="179.0" stroke="BLACK" strokeType="INSIDE" width="41.0" />
+            <Label fx:id="typeres" layoutX="-37.0" layoutY="95.0" rotate="-90.0" text="Reservation" textFill="WHITE">
+               <font>
+                  <Font name="Dosis Medium" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+   <styleClass>
+      <String fx:value="fruit-item" />
+      <String fx:value="shadow" />
+   </styleClass>
+</AnchorPane>

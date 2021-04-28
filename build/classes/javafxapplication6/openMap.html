@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title>A Leaflet map!</title>
+        <link
+            rel="stylesheet"
+            href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"
+            />
+        <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+
+        <script src="79_SubaruStretch.js"></script>
+        <!-- Load Esri Leaflet from CDN -->
+        <script
+            src="https://unpkg.com/esri-leaflet@3.0.1/dist/esri-leaflet.js"
+            integrity="sha512-JmpptMCcCg+Rd6x0Dbg6w+mmyzs1M7chHCd9W8HPovnImG2nLAQWn3yltwxXRM7WjKKFFHOAKjjF2SC4CgiFBg=="
+            crossorigin=""
+        ></script>
+
+        <!-- Load Esri Leaflet Geocoder from CDN -->
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/esri-leaflet-geocoder@3.0.0/dist/esri-leaflet-geocoder.css"
+            integrity="sha512-IM3Hs+feyi40yZhDH6kV8vQMg4Fh20s9OzInIIAc4nx7aMYMfo+IenRUekoYsHZqGkREUgx0VvlEsgm7nCDW9g=="
+            crossorigin=""
+            />
+        <script
+            src="https://unpkg.com/esri-leaflet-geocoder@3.0.0/dist/esri-leaflet-geocoder.js"
+            integrity="sha512-vZbMwAf1/rpBExyV27ey3zAEwxelsO4Nf+mfT7s6VTJPUbYmD2KSuTRXTxOFhIYqhajaBU+X5PuFK1QJ1U9Myg=="
+            crossorigin=""
+        ></script>
+
+        <style>
+            #map {
+                height: 100%;
+                margin-top: 100px;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <p id="output"></p>
+
+        <div id="map"></div>
+
+        <script>
+            var map = L.map("map").setView([48.85207, 2.36206], 13);
+            L.tileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+                attribution:
+                        'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                maxZoom: 18,
+
+                id: "mapbox/streets-v11",
+                tileSize: 512,
+                zoomOffset: -1,
+                accessToken: "your.mapbox.access.token",
+            }).addTo(map); //will be our basemap.
+
+            var popup = L.popup();
+            var theMarker = {};
+            var myJson;
+            var location1;
+            var latidude;
+            var longtitude;
+            function onMapClick(e) {
+                latidude = e.latlng.lat;
+                longtitude = e.latlng.lng;
+
+
+                var s = document.createElement("script");
+                s.src = 'http://nominatim.openstreetmap.org/reverse?json_callback=cb&format=json&lat=' + e.latlng.lat + '&lon=' + e.latlng.lng + '&zoom=27&addressdetails=1';
+
+                document.getElementsByTagName("head")[0].appendChild(s);
+
+
+
+                map.removeLayer(theMarker);
+
+
+
+
+
+                if (theMarker != undefined) {
+                    map.removeLayer(theMarker);
+                }
+                theMarker = L.marker(e.latlng).addTo(map);
+                window.cb = function cb(json) {
+                    location1 = json.address.country;
+                    document.getElementById("output").innerHTML =
+                            json.address.city;
+                };
+            }
+
+            map.on("click", onMapClick);
+        </script>
+    </body>
+</html>
